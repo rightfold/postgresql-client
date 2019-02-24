@@ -1,0 +1,32 @@
+build-type: Simple
+cabal-version: >= 1.2
+
+name: postgresql-client
+version: 0.0.0.0
+
+library
+  build-depends:
+    base,
+    binary,
+    bytestring,
+    network,
+    vector
+
+  default-extensions:
+    DerivingStrategies,
+    MonadComprehensions,
+    OverloadedLists,
+    OverloadedStrings,
+    StrictData
+
+  exposed-modules:
+    Database.PostgreSql.Connection,
+    Database.PostgreSql.Message
+
+  ghc-options:
+    -Wall
+    -Wincomplete-record-updates
+    -Wincomplete-uni-patterns
+
+  hs-source-dirs:
+    src
